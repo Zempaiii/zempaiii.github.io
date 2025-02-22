@@ -7,10 +7,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   button.addEventListener("click", function () {
-    if (this.classList.contains("active-state")) {
-      navbar.style.display = "block";
+    if (navbar.classList.contains("show")) {
+      navbar.classList.remove("show");
+      navbar.classList.add("hide");
     } else {
-      navbar.style.display = "none";
+      navbar.style.display = "block";
+      navbar.classList.remove("hide");
+      navbar.classList.add("show");
     }
   });
+
+  window.addEventListener("resize", function () {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    if (width > 768) {
+      navbar.style.display = "block";
+      navbar.classList.remove("hide");
+      navbar.classList.add("show");
+    } else {
+      navbar.style.display = "none";
+      navbar.classList.remove("show");
+      navbar.classList.add("hide");
+    }
+  });
+
+  // Initial dimensions check
+  const initialWidth = window.innerWidth;
+  const initialHeight = window.innerHeight;
+
+  if (initialWidth > 768) {
+    navbar.style.display = "block";
+    navbar.classList.remove("hide");
+    navbar.classList.add("show");
+  } else {
+    navbar.style.display = "none";
+    navbar.classList.remove("show");
+    navbar.classList.add("hide");
+  }
+
 });
