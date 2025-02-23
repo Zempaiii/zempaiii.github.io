@@ -298,7 +298,7 @@ h3 {
   }
 
   .subcontainer{
-    width: 95%;
+    width: 85%;
   }
 
   .toggler {
@@ -326,8 +326,8 @@ h3 {
     width: 100%;
   }
 
-  h1,
   h2,
+  h3,
   ul,
   .email {
     text-align: center;
