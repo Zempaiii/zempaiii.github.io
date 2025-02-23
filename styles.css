@@ -4,6 +4,10 @@ body {
   margin-top: 2.5rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 aside {
   margin-left: 2rem;
   width: 41.67%;
@@ -16,7 +20,7 @@ main {
   padding: 20px;
 }
 
-main h1, main h2, main p {
+main h1, main h2, main h3, main p {
   margin-left: 20px;
   text-align: left;
   font-family: Roboto;
@@ -109,20 +113,21 @@ li a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: Roboto;
   text-align: right;
   margin: 0;
   margin-top: 1em;
 }
 
-h1 {
+h1, h2 {
   font-weight: bold;
   color: #06a641;
   font-size: 2rem;
 }
 
-h2 {
+h3 {
   color: #eee;
   font-size: 1.25em;
 }
@@ -194,11 +199,11 @@ h2 {
   transform: translateY(0) !important;
 }
 
-#button {
+.button1 {
   margin-right: 20px;
 }
 
-#logo {
+.logo {
   height: 50px;
   width: 50px;
 }
@@ -255,11 +260,14 @@ h2 {
 }
 
 .project {
-  width: 50%;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
   border-radius: .25rem;
   border: 1px solid #444;
   margin-top: 1em;
   margin-left: 20px;
+  position: relative;
 }
 
 .projects{
@@ -272,7 +280,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1em;
+  margin: 1em;
 }
 
 .pic {
